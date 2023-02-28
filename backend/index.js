@@ -7,6 +7,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import {fileURLToPath} from "url";
+import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import { register } from "./controllers/auth.js";
 
 /*configuration  */
@@ -49,4 +51,9 @@ mongoose
 /*authentication routes with files */
 app.post("/auth/register", upload.single("picture"), register);/*uploadpic locally into assets folder*/
 app.post("/posts", verifyToken, upload.single("picture"), createPost); 
+
+/* routes  */
+app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
