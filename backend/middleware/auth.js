@@ -19,3 +19,4 @@ export const verifyToken = async (req, res, next) => {
       res.status(500).json({ error: err.message });
     }
   }; 
+/*authorization above   */
