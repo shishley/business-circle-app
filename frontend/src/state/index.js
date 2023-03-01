@@ -7,20 +7,23 @@ const initialState = {
   token: null,
   posts: [],
 };
-
+/*functions */
 export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
     setMode: (state) => {
-      state.mode = state.mode === "light" ? "dark" : "light";
+      state.mode =
+        state.mode === "light"
+          ? "dark"
+          : "light"; /*if its the other will change to other */
     },
     setLogin: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
     },
     setLogout: (state) => {
-      state.user = null;
+      state.user = null; /*reset when u logout */
       state.token = null;
     },
     setFriends: (state, action) => {
@@ -31,6 +34,7 @@ export const authSlice = createSlice({
       }
     },
     setPosts: (state, action) => {
+      /*sets post */
       state.posts = action.payload.posts;
     },
     setPost: (state, action) => {
@@ -42,7 +46,7 @@ export const authSlice = createSlice({
     },
   },
 });
-
+/*redux toolkit */
 export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
   authSlice.actions;
 export default authSlice.reducer;
