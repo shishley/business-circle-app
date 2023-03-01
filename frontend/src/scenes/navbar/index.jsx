@@ -30,7 +30,9 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
-  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");/*use media query for react instead of normal css way */
+  const isNonMobileScreens = useMediaQuery(
+    "(min-width: 1000px)"
+  ); /*use media query for react instead of normal css way */
 
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
@@ -39,7 +41,7 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.bizname}`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -48,7 +50,7 @@ const Navbar = () => {
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
           color="primary"
-          onClick={() => navigate("/home")}/*react router  */
+          onClick={() => navigate("/home")} /*react router  */
           sx={{
             "&:hover": {
               color: primaryLight,
