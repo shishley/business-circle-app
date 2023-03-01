@@ -30,7 +30,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
-  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");/*use media query for react instead of normal css way */
 
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
@@ -48,7 +48,7 @@ const Navbar = () => {
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
           color="primary"
-          onClick={() => navigate("/home")}
+          onClick={() => navigate("/home")}/*react router  */
           sx={{
             "&:hover": {
               color: primaryLight,

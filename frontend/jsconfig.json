@@ -4,4 +4,3 @@
   },
   "include": ["src"]
 }
-/*when importing files into other files starts from src*/
