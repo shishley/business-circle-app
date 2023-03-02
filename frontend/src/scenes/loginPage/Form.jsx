@@ -60,7 +60,7 @@ const Form = () => {
       formData.append(value, values[value]);
     }
     formData.append("picturePath", values.picture.name);
-
+    /*api call*/
     const savedUserResponse = await fetch(
       "http://localhost:3001/auth/register",
       {
@@ -91,7 +91,7 @@ const Form = () => {
           token: loggedIn.token,
         })
       );
-      navigate("/home");
+      navigate("/home"); /*after successfully authentication */
     }
   };
 

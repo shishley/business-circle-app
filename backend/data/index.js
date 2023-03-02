@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+/*rest api create stock data */
 const userIds = [
   new mongoose.Types.ObjectId(),
   new mongoose.Types.ObjectId(),
@@ -136,8 +136,6 @@ export const users = [
 
 export const posts = [
   {
-    
-
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[1],
     bizname: "Sweettooth Candy",
@@ -162,8 +160,7 @@ export const posts = [
     userId: userIds[3],
     bizname: "TestReady Tutoring",
     location: "Cape Town, WC",
-    description:
-      "All our grade 11 students passed their final exams",
+    description: "All our grade 11 students passed their final exams",
     picturePath: "post2.jpeg",
     userPicturePath: "p6.jpeg",
     likes: new Map([
@@ -207,8 +204,7 @@ export const posts = [
     userId: userIds[5],
     bizname: "Build Ryt",
     location: "Joburg, GP",
-    description:
-      "we offer the best corporate construction supplies ",
+    description: "we offer the best corporate construction supplies ",
     picturePath: "post4.jpeg",
     userPicturePath: "p7.jpeg",
     likes: new Map([
@@ -250,8 +246,7 @@ export const posts = [
     userId: userIds[7],
     bizname: "Smart Audit",
     location: "Midrand, GP",
-    description:
-      "Best finance company ",
+    description: "Best finance company ",
     picturePath: "post6.jpeg",
     userPicturePath: "p9.jpeg",
     likes: new Map([
